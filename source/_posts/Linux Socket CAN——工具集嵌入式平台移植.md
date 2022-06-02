@@ -1,6 +1,6 @@
 ---
 title: Linux Socket CAN——工具集嵌入式平台移植
-index_img: /img/post/can驱动开发/can.png
+index_img: /img/post/can-tool/tool.jpeg
 date: 2022-06-02 12:14:54
 categories:
 - Linux Driver
