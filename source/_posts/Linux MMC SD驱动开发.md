@@ -1,6 +1,6 @@
 ---
 title: Linux MMC/SD驱动开发
-index_img: /img/post/mmc sd/sd.jpeg
+index_img: /img/post/mmc sd/mmc sd.jpeg
 date: 2018-12-26 16:15:52
 categories:
 - Linux Driver
