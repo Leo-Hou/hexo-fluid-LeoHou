@@ -20,7 +20,6 @@ BIOS、PCI/PCIE总线、磁盘、网卡、显卡、声卡、键盘、鼠标等�
 内存的虚拟化，包括：客户机的创建、虚拟内存的分配、 CPU执行模式的切换、vCPU寄存器的访问、vCPU指令的执行。<br>
 &emsp;&emsp;QEMU和KVM通过IOCTL进行交互，Linux系统下QMEU/KVM虚拟化架构见图1.1：</div>
 
-#### 
 ![图1.1](图1.1.png)
 
 # 二、虚拟机创建流程
@@ -28,28 +27,24 @@ BIOS、PCI/PCIE总线、磁盘、网卡、显卡、声卡、键盘、鼠标等�
 <div class="markdown-body">
 &emsp;&emsp;KVM是Linux系统下的一个内核模块，下面以AMD的x86架构为例介绍KVM内核模块的初始化流程。kvm-amd以内核模块的方式加载入Linux内核，然后执行kvm_init()，在kvm_init()中进行了一系列初始化，见图2.1.1：</div>
 
-#### 
 ![图2.1.1](图2.1.1.png)
 
 ## 2.2 QEMU中kvm_init注册流程
 <div class="markdown-body">
 &emsp;&emsp;kvm_init是QEMU中创建虚拟机的入口，下图主要呈现了kvm_init的注册流程：</div>
 
-#### 
 ![图2.2.1](图2.2.1.png)
 
 ## 2.3 虚拟机创建流程
 <div class="markdown-body">
 &emsp;&emsp;kvm_init发起创建虚拟机的的流程，见图2.3.1：</div>
 
-#### 
 ![图2.3.1](图2.3.1.png)
 
 ## 2.4 vCPU创建流程
 <div class="markdown-body">
 &emsp;&emsp;kvm_init创建虚拟机时同时要创建vCPU，kvm_init发起创建vCPU流程，见图2.4.1：</div>
 
-#### 
 ![图2.4.1](图2.4.1.png)
 
 
