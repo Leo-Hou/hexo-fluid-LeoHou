@@ -51,7 +51,7 @@ excerpt: 声音在自然界以声波的形式存在，是一系列连续变化�
 
 ## 1.2 linux音频子系统介绍
 **声明：** 本章节部分内容引用了博文《Linux 音频系统简析》，网址：http://blog.csdn.net/meizum10/article/details/17437959
-       Linux音频系统比较复杂，各层间有很多交叉，可能是最无序的子系统，并且它有两套音频驱动框架: OSS (Open Sound System)和ALSA (Advanced Linux Sound Architechture)，所以底层驱动有OSS和ALSA两套API。ALSA经过多年的发展，基本统一了Linux声卡硬件驱动层的借口，OSS日渐退出，但是在ALSA之上的各个应用层，方案和软件繁多复杂，ESD，PulseAudio, JACK,GStreamer, 这些系统组件各个为战，实现了不同的功能。
+       Linux音频系统比较复杂，各层间有很多交叉，可能是最无序的子系统，并且它有两套音频驱动框架: OSS (Open Sound System)和ALSA (Advanced Linux Sound Architechture)，所以底层驱动有OSS和ALSA两套API。ALSA经过多年的发展，基本统一了Linux声卡硬件驱动层的接口，OSS日渐退出，但是在ALSA之上的各个应用层，方案和软件繁多复杂，ESD，PulseAudio, JACK,GStreamer, 这些系统组件各个为战，实现了不同的功能。
 ![图1.2](1.2.jpg)
        上图1.2描述了Linux音频系统各部分调用关系，下面简要介绍各部分。
 
@@ -368,6 +368,4 @@ find .|cpio -o -H newc|gzip -9 > $(pwd)/initramfs.img.gz
 ```
 
 ## 3.3 相关软件应用
-       在alsa-utils包含一些ALSA小的测试工具，这些工具软件都是基于alsa-lib的API实现的，其中amixer可以进行音频通道选通和音量调节，aplay是播放音频软件，arecord是录音件。                                                           
-
-
+       在alsa-utils包含一些ALSA小的测试工具，这些工具软件都是基于alsa-lib的API实现的，其中amixer可以进行音频通道选通和音量调节，aplay是播放音频软件，arecord是录音软件。
